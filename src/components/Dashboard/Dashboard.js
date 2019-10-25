@@ -1,21 +1,16 @@
 import React, { Component } from 'react'
-
+import House from '../House/House'
 
 
 class Dash extends Component {
-    constructor(props) {
-        super(props);
+    render () {
+      return (
+        <div>
+          Dash dash dash
+        <House />
+        </div>
+      );
     }
-
-
-    render() {
-       return(
-           <div>
-               Dahboard
-           </div>
-       )
-    }
-
-}
+  }
 
 export default Dash

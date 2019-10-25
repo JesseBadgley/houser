@@ -1,21 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
 
 
-class Dash extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-
-    render() {
-       return(
-           <div>
-               Header
-           </div>
-       )
-    }
-
+export default function header () {
+    return (
+        <div>
+            <h1>Header</h1>
+        </div>
+    )
 }
-
-export default Header

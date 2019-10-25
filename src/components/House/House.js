@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 
 
-class Dash extends Component {
+class House extends Component {
     constructor(props) {
         super(props);
     }
