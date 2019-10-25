@@ -1,11 +1,9 @@
 require('dotenv').config()
 const express = require('express')
-const controller = require('./controller')
 const massive = require ('massive')
-
+const controller = require ('./controller')
 
 const app = express()
-
 
 const {SERVER_PORT, CONNECTION_STRING} = process.env
 massive(CONNECTION_STRING)
@@ -15,8 +13,12 @@ massive(CONNECTION_STRING)
 console.log('db is working'))
 .catch(err=>console.log(err))
 
-
 app.use(express.json())
+ 
+app.get('/api/homes/', controller.getAll)
+app.post('/api/homes/', controller.addHome)
+app.delete('/api/homes/:id', controller.deleteHome)
+app.put('/api/homes/:id', controller.editHome)
 
 
-app.listen(SERVER_PORT, ()=> console.log(`I am listening on port ${SERVER_PORT} :-) `))
+app.listen(SERVER_PORT, ()=> console.log(`I am listening on PORT ${SERVER_PORT} :-)`))

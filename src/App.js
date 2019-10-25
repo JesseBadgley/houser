@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import routes from './routes';
 import Header from './Components/Header/Header'
-import Dash from './Components/Dashboard/Dashboard'
-import Wizard from './Components/Wizard/Wizard'
+import { HashRouter, Link} from "react-router-dom";
+import './App.css';
 
- 
+import axios from 'axios'
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <div>
-      <Header />
-      <Dash />
-      <Wizard />
+      <HashRouter>
+      <div className="App">
+        <Header />
+        <div className="main">
+        {routes}
+
+        </div>
       </div>
-    );
+      </HashRouter>
+    )
   }
 }
 
