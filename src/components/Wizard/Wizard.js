@@ -11,11 +11,11 @@ class Dash extends Component {
     render() {
        return(
            <div>
-               Dahboard
+               Wizard
            </div>
        )
     }
 
 }
 
-export default Dash
+export default Wizard
